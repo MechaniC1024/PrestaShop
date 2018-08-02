@@ -1,0 +1,18 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="PrestaShop_Android" verbose="1">
+
+	<listeners>
+		<listener
+			class-name="com.PrestaShop.Listeners.TestFailedScreenshotListener">		    
+		</listener>
+	</listeners>
+
+	<parameter name="browser" value="Android" />
+
+	<test name="Ordering.">
+		<classes>
+			<class name="com.PrestaShop.test4.Ordering" />
+		</classes>
+	</test>
+
+</suite>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [PrestaShop_Chrome]">
+  <parameter name="browser" value="Chrome"/>
+  <listeners>
+    <listener class-name="com.PrestaShop.Listeners.TestFailedScreenshotListener"/>
+  </listeners>
+  <test thread-count="5" name="Check the addition of a new category.(failed)">
+    <classes>
+      <class name="com.PrestaShop.test2.AddNewCategory">
+        <methods>
+          <include name="signIn"/>
+          <include name="categorySection"/>
+          <include name="closeBrowser"/>
+          <include name="addNewCategory"/>
+          <include name="setUp"/>
+          <include name="checkingNewCategory"/>
+          <include name="logOut"/>
+        </methods>
+      </class> <!-- com.PrestaShop.test2.AddNewCategory -->
+    </classes>
+  </test> <!-- Check the addition of a new category.(failed) -->
+</suite> <!-- Failed suite [PrestaShop_Chrome] -->

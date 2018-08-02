@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="6" passed="6">
+  <reporter-output>
+  </reporter-output>
+  <suite name="PrestaShop_Chrome" duration-ms="34308" started-at="2018-07-28T14:59:34Z" finished-at="2018-07-28T15:00:08Z">
+    <groups>
+    </groups>
+    <test name="Check login and logout." duration-ms="12669" started-at="2018-07-28T14:59:34Z" finished-at="2018-07-28T14:59:47Z">
+      <class name="com.PrestaShop.test1.LoginAndLogout">
+        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:com.PrestaShop.test1.LoginAndLogout@4d6f623d]" name="setUp" is-config="true" duration-ms="5528" started-at="2018-07-28T14:59:34Z" description="Инициализация браузера." finished-at="2018-07-28T14:59:39Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="loginAndLogout(java.lang.String, java.lang.String)[pri:0, instance:com.PrestaShop.test1.LoginAndLogout@4d6f623d]" name="loginAndLogout" duration-ms="6711" started-at="2018-07-28T14:59:39Z" description="Вход в админ панель сайта и выход из нее." data-provider="getLoginAndPassword" finished-at="2018-07-28T14:59:46Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[webinar.test@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Xcg7299bnSmMuRLp9ITw]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginAndLogout -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.PrestaShop.test1.LoginAndLogout@4d6f623d]" name="closeBrowser" is-config="true" duration-ms="64" started-at="2018-07-28T14:59:46Z" description="Закрытие браузера." finished-at="2018-07-28T14:59:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- com.PrestaShop.test1.LoginAndLogout -->
+    </test> <!-- Check login and logout. -->
+    <test name="Check the addition of a new category." duration-ms="21579" started-at="2018-07-28T14:59:47Z" finished-at="2018-07-28T15:00:08Z">
+      <class name="com.PrestaShop.test2.AddNewCategory">
+        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:com.PrestaShop.test2.AddNewCategory@3a60c416]" name="setUp" is-config="true" duration-ms="4055" started-at="2018-07-28T14:59:47Z" description="Инициализация браузера." finished-at="2018-07-28T14:59:51Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="signIn(java.lang.String, java.lang.String)[pri:0, instance:com.PrestaShop.test2.AddNewCategory@3a60c416]" name="signIn" duration-ms="2343" started-at="2018-07-28T14:59:51Z" description="Вход в админ панель." data-provider="getLoginAndPassword" finished-at="2018-07-28T14:59:53Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[webinar.test@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Xcg7299bnSmMuRLp9ITw]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signIn -->
+        <test-method status="PASS" signature="categorySection()[pri:0, instance:com.PrestaShop.test2.AddNewCategory@3a60c416]" name="categorySection" duration-ms="5992" started-at="2018-07-28T14:59:53Z" description="Переход в раздел категории." depends-on-methods="com.PrestaShop.test2.AddNewCategory.signIn" finished-at="2018-07-28T14:59:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- categorySection -->
+        <test-method status="PASS" signature="addNewCategory()[pri:0, instance:com.PrestaShop.test2.AddNewCategory@3a60c416]" name="addNewCategory" duration-ms="6050" started-at="2018-07-28T14:59:59Z" description="Добавление новой категории." depends-on-methods="com.PrestaShop.test2.AddNewCategory.categorySection" finished-at="2018-07-28T15:00:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addNewCategory -->
+        <test-method status="PASS" signature="checkingNewCategory()[pri:0, instance:com.PrestaShop.test2.AddNewCategory@3a60c416]" name="checkingNewCategory" duration-ms="1895" started-at="2018-07-28T15:00:05Z" description="Проверка созданной категории." depends-on-methods="com.PrestaShop.test2.AddNewCategory.addNewCategory" finished-at="2018-07-28T15:00:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkingNewCategory -->
+        <test-method status="PASS" signature="logOut()[pri:0, instance:com.PrestaShop.test2.AddNewCategory@3a60c416]" name="logOut" duration-ms="1133" started-at="2018-07-28T15:00:07Z" description="Выход с аккаунта." depends-on-methods="com.PrestaShop.test2.AddNewCategory.checkingNewCategory" finished-at="2018-07-28T15:00:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logOut -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.PrestaShop.test2.AddNewCategory@3a60c416]" name="closeBrowser" is-config="true" duration-ms="65" started-at="2018-07-28T15:00:08Z" description="Закрытие браузера." finished-at="2018-07-28T15:00:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- com.PrestaShop.test2.AddNewCategory -->
+    </test> <!-- Check the addition of a new category. -->
+  </suite> <!-- PrestaShop_Chrome -->
+</testng-results>
