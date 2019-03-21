@@ -30,27 +30,6 @@ public class InitialConfiguration {
 	@Parameters("browser")
 	public void setUp(@Optional("Chrome") String browser) {
 
-//		System.setProperty("browser.app", browser);
-		
-		//Layout pattern = new PatternLayout("%d{MM-dd-yyyy HH:mm:ss} %-5p %c:%m%n");
-//		RollingFileAppender appender = new RollingFileAppender();
-		//pattern,		"src" + sep + "test" + sep + "resources" + sep + "outputLog4j" + sep + "Selenium_" + browser,		false
-//		try {
-//			appender.setWriter(new FileWriter(new File("src" + sep + "test" + sep + "resources" + sep + "outputLog4j" + sep + "Selenium_" + browser), true));
-//		} catch (IOException e1) {
-//			// TODO Auto-generated catch block
-//			e1.printStackTrace();
-//		}
-		//appender.setMaxBackupIndex(5);
-		//appender.setMaxFileSize("10MB");
-		//appender.setEncoding("Cp1251");
-		//appender.setAppend(false);
-//		appender.activateOptions();
-
-		//log.setAdditivity(false);
-		//log.setLevel(Level.DEBUG);
-//		log.addAppender(appender);
-
 		switch (browser) {
 		case "Chrome": {
 			System.setProperty("webdriver.chrome.driver", "Drivers" + sep + "chromedriver.exe");
