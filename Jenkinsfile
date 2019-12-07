@@ -1,12 +1,13 @@
 pipeline {
   agent any
-  stages {
-    stage('Test') {
-      steps {
-        bat 'mvn clean test site'
-        git 'https://github.com/MechaniC1024/PrestaShop'
+  stages{
+    stage("TEST"){
+      steps{
+        git url: "https://github.com/MechaniC1024/PrestaShop.git"
+        dir("PrestaShop"){
+          bat ''' mvn clean test site '''
+        }
       }
     }
-
   }
-}
+}    
