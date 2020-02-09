@@ -15,13 +15,10 @@ import java.util.Properties;
 
 import org.testng.annotations.DataProvider;
 
-import static com.PrestaShop.InitialConfiguration.InitialConfiguration.*;
-
 public class ProcessingData {
-
+	
 	public static final String sep = File.separator;
-	private static final String path = "src" + sep + "test" + sep + "framework" + sep + "com" + sep + "PrestaShop" + sep
-			+ "DataResources" + sep;
+	private static final String path = "src" + sep + "test" + sep + "resources"  + sep + "ProjectData" + sep;
 
 	private static final String pathToLoginData = path + "DataLoginInAdmin.properties";
 	private static final String pathToURLs = path + "URLsData.properties";
@@ -34,7 +31,7 @@ public class ProcessingData {
 
 	private static final String loginAdmin = "LoginAdmin";
 	private static final String passwordAdmin = "PasswordAdmin";
-	
+
 	private static String getPath(InputStream fileProper) {
 		
 		Field pathField = null;
@@ -46,7 +43,7 @@ public class ProcessingData {
 		} catch (NoSuchFieldException | SecurityException | IllegalArgumentException | IllegalAccessException e) {
 			e.printStackTrace();
 		}
-		
+
 		return path;
 	}
 
@@ -61,8 +58,7 @@ public class ProcessingData {
 		}
 
 		String strProp = prop.getProperty(key);
-		
-		log.debug("Получение значения по ключу: " + key + "с файла: " + getPath(fileProper));
+
 		return strProp;
 	}
 
@@ -79,7 +75,6 @@ public class ProcessingData {
 		String strData = prop.getProperty(key);
 		List<String> listData = Arrays.asList(strData.split(","));
 
-		log.debug("Получение списка значений по ключу: " + key + "с файла: " + getPath(fileProper));
 		return listData;
 	}
 
@@ -102,12 +97,11 @@ public class ProcessingData {
 		}
 		return url;
 	}
-	
+
 	public static int getRandomPayment() {
-		
+
 		int payment = (int) ((Math.random() * 2) + 1);
-		
-		log.debug("Выбран метод оплаты: " + payment + ".");
+
 		return payment;
 	}
 
@@ -124,7 +118,7 @@ public class ProcessingData {
 		}
 		return new Object[][] { { login, password } };
 	}
-		
+
 	@DataProvider
 	public Object[][] getCustomerData() {
 
@@ -139,7 +133,7 @@ public class ProcessingData {
 		Object arrayData[] = listData.toArray();
 		return new Object[][] { arrayData };
 	}
-	
+
 	@DataProvider
 	public Object[][] getCustomerAddress() {
 

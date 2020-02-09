@@ -7,7 +7,6 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 
-import static com.PrestaShop.InitialConfiguration.InitialConfiguration.log;
 import static com.PrestaShop.Wait.Wait.*;
 
 public class Catalog{
@@ -23,15 +22,14 @@ public class Catalog{
 	public Catalog(RemoteWebDriver driver, Actions actions) {
 		
 		this.driver = driver;
-		PageFactory.initElements(new AjaxElementLocatorFactory(driver, 60), this);
+		PageFactory.initElements(new AjaxElementLocatorFactory(driver, 20), this);
 		
 		this.actions = actions;
 	}
 		
 	public Category goToCategories() {
 
-		log.debug("Переход в раздел \"Категории\".");
-		WebElement categories = waitingForElementToBeClickable(driver, driver.findElement(this.categories), 60);
+		WebElement categories = waitingForElementToBeClickable(driver, driver.findElement(this.categories), 20);
 		actions.click(categories).perform();
 		
 		return new Category(driver); 
@@ -39,8 +37,7 @@ public class Catalog{
 	
 	public Products goToProduct() {
 		
-		log.debug("Переход в раздел \"Товары\".");
-		WebElement products = waitingForElementToBeClickable(driver, driver.findElement(this.products), 60);
+		WebElement products = waitingForElementToBeClickable(driver, driver.findElement(this.products), 20);
 		actions.click(products).build().perform();
 		
 		return new Products(driver);		

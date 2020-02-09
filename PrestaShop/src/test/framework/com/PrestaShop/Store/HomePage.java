@@ -12,10 +12,12 @@ public class HomePage {
 
 	private RemoteWebDriver driver;
 
-	@FindBy(how = How.XPATH, xpath = "//div[@id = '_mobile_logo']/a")
+	@CacheLookup
+	@FindBy(xpath = "//div[@id = '_mobile_logo']/a")
 	private WebElement mobileLogo;
 
-	@FindBy(how = How.XPATH, xpath = "//section[@id = 'content']/section/a")
+	@CacheLookup
+	@FindBy(xpath = "//section[@id = 'content']/section/a")
 	private WebElement allProduct;
 
 	public HomePage(RemoteWebDriver driver) {
@@ -30,20 +32,16 @@ public class HomePage {
 
 			if (mobileLogo.isDisplayed() == true && driver.getCapabilities().getPlatform() == platform) {
 				addAttachmentToReport("Version: ", "Mobile version.");
-				log.debug("Мобильная версия сайта.");
 			} else {
 				addAttachmentToReport("Version: ", "Error version.");
-				log.debug("Ошибка версии сайта.");
 			}
 
 		} catch (NoSuchElementException e) {
 
 			if (driver.getCapabilities().getPlatform() != platform) {
 				addAttachmentToReport("Version: ", "Desktop version.");
-				log.debug("Десктопная версия сайта.");
 			} else {
 				addAttachmentToReport("Version: ", "Mobile version.");
-				log.debug("Мобильная версия сайта.");
 			}
 		}
 
@@ -52,7 +50,6 @@ public class HomePage {
 
 	public AllProduct clickOnAllProduct() {
 
-		log.debug("Клик на ссылку \"Все товары\".");
 		allProduct.click();
 		return new AllProduct(driver);
 	}

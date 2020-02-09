@@ -4,13 +4,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 
 import static com.PrestaShop.Wait.Wait.*;
-import static com.PrestaShop.InitialConfiguration.InitialConfiguration.*;
 
 import java.util.List;
 
@@ -20,7 +19,8 @@ public class AllProduct{
 	
 	private int randomNumberProduct;
 	
-	@FindBy(how = How.XPATH, xpath = "//div[@class='products row']//div[@class='product-description']//a")
+	@CacheLookup
+	@FindBy(xpath = "//div[@class='products row']//div[@class='product-description']//a")
 	private List<WebElement> allProducts;
 	
 	private By next = By.xpath("//a[@rel = 'next']");
@@ -28,18 +28,17 @@ public class AllProduct{
 	AllProduct(RemoteWebDriver driver) {
 		
 		this.driver = driver;
-		PageFactory.initElements(new AjaxElementLocatorFactory(driver, 60), this);
+		PageFactory.initElements(new AjaxElementLocatorFactory(driver, 20), this);
 		randomNumberProduct = (int) (Math.random() * allProducts.size());
 	}
 
 	private WebElement clickOnNext() {
 
-		return waitingForElementToBeClickable(driver, next, 60);
+		return waitingForElementToBeClickable(driver, next, 20);
 	}
 	
 	public Product clickOnRandomProduct() {
 		
-		log.debug("Выбор случайтого товара на странице магазина из списка товаров.");
 		allProducts.get(randomNumberProduct).click();
 		
 		return new Product(driver, randomNumberProduct);
@@ -71,21 +70,18 @@ public class AllProduct{
 
 	public Product clickOnProduct(String nameProduct) {
 
-		log.debug("Выбор товара на странице магазина из списка товаров по имени: " + nameProduct + ".");
 		selectProduct(nameProduct).click();
 		return new Product(driver);
 	}
 	
 	public Product clickOnProduct(StringBuilder nameProduct) {
 
-		log.debug("Выбор товара на странице магазина из списка товаров по имени: " + nameProduct.toString() + ".");
 		selectProduct(nameProduct.toString()).click();
 		return new Product(driver);
 	}
 	
 	public Product clickOnRandomProductAgain(int numberProduct) {
 
-		log.debug("Выбор товара, который до этого выбирали случайно.");
 		allProducts.get(numberProduct).click();
 		return new Product(driver);
 	}

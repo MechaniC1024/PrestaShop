@@ -5,7 +5,6 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 
-import static com.PrestaShop.InitialConfiguration.InitialConfiguration.log;
 import static com.PrestaShop.Wait.Wait.*;
 
 public class ProductDesign{
@@ -17,13 +16,12 @@ public class ProductDesign{
 	public ProductDesign(RemoteWebDriver driver) {
 
 		this.driver = driver;
-		PageFactory.initElements(new AjaxElementLocatorFactory(driver, 60), this);
+		PageFactory.initElements(new AjaxElementLocatorFactory(driver, 20), this);
 	}
 	
 	public Cart clearanceOfProduct() {
 		
-		log.debug("Клик по кнопке \"Перейти к оформлению\".");
-		waitingForElementToBeClickable(driver, clearanceOfProduct, 60).click();
+		waitingForElementToBeClickable(driver, clearanceOfProduct, 20).click();
 		return new Cart(driver);
 	}
 

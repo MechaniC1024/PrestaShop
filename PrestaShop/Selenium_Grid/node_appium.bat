@@ -1,1 +1,0 @@
-appium --nodeconfig config.json -p 5555 --address 127.0.0.1

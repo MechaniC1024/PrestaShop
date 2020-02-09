@@ -1,95 +1,1170 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="6" passed="6">
+<testng-results skipped="38" failed="0" ignored="0" total="38" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="PrestaShop_Chrome" duration-ms="34308" started-at="2018-07-28T14:59:34Z" finished-at="2018-07-28T15:00:08Z">
+  <suite name="PrestaShop_Chrome" duration-ms="2440" started-at="2020-01-30T20:54:20 MSK" finished-at="2020-01-30T20:54:22 MSK">
     <groups>
+      <group name="title">
+        <method signature="Titles.checkTitleAdvancedParameters()[pri:0, instance:com.PrestaShop.test1.Titles@3506d826]" name="checkTitleAdvancedParameters" class="com.PrestaShop.test1.Titles"/>
+        <method signature="Titles.checkTitleCatalog()[pri:0, instance:com.PrestaShop.test1.Titles@3506d826]" name="checkTitleCatalog" class="com.PrestaShop.test1.Titles"/>
+        <method signature="Titles.checkTitleCustomer()[pri:0, instance:com.PrestaShop.test1.Titles@3506d826]" name="checkTitleCustomer" class="com.PrestaShop.test1.Titles"/>
+        <method signature="Titles.checkTitleCustomerService()[pri:0, instance:com.PrestaShop.test1.Titles@3506d826]" name="checkTitleCustomerService" class="com.PrestaShop.test1.Titles"/>
+        <method signature="Titles.checkTitleDashboard()[pri:0, instance:com.PrestaShop.test1.Titles@3506d826]" name="checkTitleDashboard" class="com.PrestaShop.test1.Titles"/>
+        <method signature="Titles.checkTitleDelivery()[pri:0, instance:com.PrestaShop.test1.Titles@3506d826]" name="checkTitleDelivery" class="com.PrestaShop.test1.Titles"/>
+        <method signature="Titles.checkTitleDesign()[pri:0, instance:com.PrestaShop.test1.Titles@3506d826]" name="checkTitleDesign" class="com.PrestaShop.test1.Titles"/>
+        <method signature="Titles.checkTitleInternational()[pri:0, instance:com.PrestaShop.test1.Titles@3506d826]" name="checkTitleInternational" class="com.PrestaShop.test1.Titles"/>
+        <method signature="Titles.checkTitleModules()[pri:0, instance:com.PrestaShop.test1.Titles@3506d826]" name="checkTitleModules" class="com.PrestaShop.test1.Titles"/>
+        <method signature="Titles.checkTitleOrder()[pri:0, instance:com.PrestaShop.test1.Titles@3506d826]" name="checkTitleOrder" class="com.PrestaShop.test1.Titles"/>
+        <method signature="Titles.checkTitlePayment()[pri:0, instance:com.PrestaShop.test1.Titles@3506d826]" name="checkTitlePayment" class="com.PrestaShop.test1.Titles"/>
+        <method signature="Titles.checkTitleShopParameters()[pri:0, instance:com.PrestaShop.test1.Titles@3506d826]" name="checkTitleShopParameters" class="com.PrestaShop.test1.Titles"/>
+        <method signature="Titles.checkTitleStatistics()[pri:0, instance:com.PrestaShop.test1.Titles@3506d826]" name="checkTitleStatistics" class="com.PrestaShop.test1.Titles"/>
+      </group> <!-- title -->
     </groups>
-    <test name="Check login and logout." duration-ms="12669" started-at="2018-07-28T14:59:34Z" finished-at="2018-07-28T14:59:47Z">
+    <test name="Check login and logout." duration-ms="312" started-at="2020-01-30T20:54:20 MSK" finished-at="2020-01-30T20:54:20 MSK">
       <class name="com.PrestaShop.test1.LoginAndLogout">
-        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:com.PrestaShop.test1.LoginAndLogout@4d6f623d]" name="setUp" is-config="true" duration-ms="5528" started-at="2018-07-28T14:59:34Z" description="Инициализация браузера." finished-at="2018-07-28T14:59:39Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Chrome]]>
-              </value>
-            </param>
-          </params>
+        <test-method status="SKIP" signature="beforeTest(org.testng.ITestContext)[pri:0, instance:com.PrestaShop.test1.LoginAndLogout@74075134]" name="beforeTest" is-config="true" duration-ms="-1580406860529" started-at="2020-01-30T20:54:20 MSK" finished-at="1970-01-01T03:00:00 MSK">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="loginAndLogout(java.lang.String, java.lang.String)[pri:0, instance:com.PrestaShop.test1.LoginAndLogout@4d6f623d]" name="loginAndLogout" duration-ms="6711" started-at="2018-07-28T14:59:39Z" description="Вход в админ панель сайта и выход из нее." data-provider="getLoginAndPassword" finished-at="2018-07-28T14:59:46Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[webinar.test@gmail.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Xcg7299bnSmMuRLp9ITw]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- beforeTest -->
+        <test-method status="SKIP" signature="login(java.lang.String, java.lang.String)[pri:0, instance:com.PrestaShop.test1.LoginAndLogout@74075134]" name="login" duration-ms="0" started-at="2020-01-30T20:54:20 MSK" description="Вход в админ панель сайта." data-provider="getLoginAndPassword" finished-at="2020-01-30T20:54:20 MSK">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginAndLogout -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.PrestaShop.test1.LoginAndLogout@4d6f623d]" name="closeBrowser" is-config="true" duration-ms="64" started-at="2018-07-28T14:59:46Z" description="Закрытие браузера." finished-at="2018-07-28T14:59:47Z">
+        </test-method> <!-- login -->
+        <test-method status="SKIP" signature="logout()[pri:0, instance:com.PrestaShop.test1.LoginAndLogout@74075134]" name="logout" duration-ms="0" started-at="2020-01-30T20:54:20 MSK" description="Выход из админ панели сайта." depends-on-methods="com.PrestaShop.test1.LoginAndLogout.login" finished-at="2020-01-30T20:54:20 MSK">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method LoginAndLogout.logout()[pri:0, instance:com.PrestaShop.test1.LoginAndLogout@74075134] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method LoginAndLogout.logout()[pri:0, instance:com.PrestaShop.test1.LoginAndLogout@74075134] depends on not successfully finished methods
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- closeBrowser -->
+        </test-method> <!-- logout -->
+        <test-method status="SKIP" signature="afterTest(org.testng.ITestContext)[pri:0, instance:com.PrestaShop.test1.LoginAndLogout@74075134]" name="afterTest" is-config="true" duration-ms="-1580406860826" started-at="2020-01-30T20:54:20 MSK" finished-at="1970-01-01T03:00:00 MSK">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
       </class> <!-- com.PrestaShop.test1.LoginAndLogout -->
     </test> <!-- Check login and logout. -->
-    <test name="Check the addition of a new category." duration-ms="21579" started-at="2018-07-28T14:59:47Z" finished-at="2018-07-28T15:00:08Z">
-      <class name="com.PrestaShop.test2.AddNewCategory">
-        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:com.PrestaShop.test2.AddNewCategory@3a60c416]" name="setUp" is-config="true" duration-ms="4055" started-at="2018-07-28T14:59:47Z" description="Инициализация браузера." finished-at="2018-07-28T14:59:51Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="signIn(java.lang.String, java.lang.String)[pri:0, instance:com.PrestaShop.test2.AddNewCategory@3a60c416]" name="signIn" duration-ms="2343" started-at="2018-07-28T14:59:51Z" description="Вход в админ панель." data-provider="getLoginAndPassword" finished-at="2018-07-28T14:59:53Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[webinar.test@gmail.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Xcg7299bnSmMuRLp9ITw]]>
-              </value>
-            </param>
-          </params>
+    <test name="Check titles." duration-ms="625" started-at="2020-01-30T20:54:21 MSK" finished-at="2020-01-30T20:54:21 MSK">
+      <class name="com.PrestaShop.test1.Titles">
+        <test-method status="SKIP" signature="signIn(java.lang.String, java.lang.String)[pri:0, instance:com.PrestaShop.test1.Titles@3506d826]" name="signIn" duration-ms="0" started-at="2020-01-30T20:54:21 MSK" description="Вход в админ панель." data-provider="getLoginAndPassword" finished-at="2020-01-30T20:54:21 MSK">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- signIn -->
-        <test-method status="PASS" signature="categorySection()[pri:0, instance:com.PrestaShop.test2.AddNewCategory@3a60c416]" name="categorySection" duration-ms="5992" started-at="2018-07-28T14:59:53Z" description="Переход в раздел категории." depends-on-methods="com.PrestaShop.test2.AddNewCategory.signIn" finished-at="2018-07-28T14:59:59Z">
+        <test-method status="SKIP" signature="beforeTest(org.testng.ITestContext)[pri:0, instance:com.PrestaShop.test1.Titles@3506d826]" name="beforeTest" is-config="true" duration-ms="-1580406861092" started-at="2020-01-30T20:54:21 MSK" finished-at="1970-01-01T03:00:00 MSK">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- categorySection -->
-        <test-method status="PASS" signature="addNewCategory()[pri:0, instance:com.PrestaShop.test2.AddNewCategory@3a60c416]" name="addNewCategory" duration-ms="6050" started-at="2018-07-28T14:59:59Z" description="Добавление новой категории." depends-on-methods="com.PrestaShop.test2.AddNewCategory.categorySection" finished-at="2018-07-28T15:00:05Z">
+        </test-method> <!-- beforeTest -->
+        <test-method status="SKIP" signature="checkTitleAdvancedParameters()[pri:0, instance:com.PrestaShop.test1.Titles@3506d826]" name="checkTitleAdvancedParameters" duration-ms="0" started-at="2020-01-30T20:54:21 MSK" description="Проверка титула страницы на вкладке &quot;Конфигурация&quot; после обновления страницы." depends-on-methods="com.PrestaShop.test1.Titles.signIn" finished-at="2020-01-30T20:54:21 MSK">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Titles.checkTitleAdvancedParameters()[pri:0, instance:com.PrestaShop.test1.Titles@3506d826] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Titles.checkTitleAdvancedParameters()[pri:0, instance:com.PrestaShop.test1.Titles@3506d826] depends on not successfully finished methods
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addNewCategory -->
-        <test-method status="PASS" signature="checkingNewCategory()[pri:0, instance:com.PrestaShop.test2.AddNewCategory@3a60c416]" name="checkingNewCategory" duration-ms="1895" started-at="2018-07-28T15:00:05Z" description="Проверка созданной категории." depends-on-methods="com.PrestaShop.test2.AddNewCategory.addNewCategory" finished-at="2018-07-28T15:00:07Z">
+        </test-method> <!-- checkTitleAdvancedParameters -->
+        <test-method status="SKIP" signature="checkTitleCatalog()[pri:0, instance:com.PrestaShop.test1.Titles@3506d826]" name="checkTitleCatalog" duration-ms="0" started-at="2020-01-30T20:54:21 MSK" description="Проверка титула страницы на вкладке &quot;Каталог&quot; после обновления страницы." depends-on-methods="com.PrestaShop.test1.Titles.signIn" finished-at="2020-01-30T20:54:21 MSK">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Titles.checkTitleCatalog()[pri:0, instance:com.PrestaShop.test1.Titles@3506d826] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Titles.checkTitleCatalog()[pri:0, instance:com.PrestaShop.test1.Titles@3506d826] depends on not successfully finished methods
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- checkingNewCategory -->
-        <test-method status="PASS" signature="logOut()[pri:0, instance:com.PrestaShop.test2.AddNewCategory@3a60c416]" name="logOut" duration-ms="1133" started-at="2018-07-28T15:00:07Z" description="Выход с аккаунта." depends-on-methods="com.PrestaShop.test2.AddNewCategory.checkingNewCategory" finished-at="2018-07-28T15:00:08Z">
+        </test-method> <!-- checkTitleCatalog -->
+        <test-method status="SKIP" signature="checkTitleCustomer()[pri:0, instance:com.PrestaShop.test1.Titles@3506d826]" name="checkTitleCustomer" duration-ms="0" started-at="2020-01-30T20:54:21 MSK" description="Проверка титула страницы на вкладке &quot;Клиенты&quot; после обновления страницы." depends-on-methods="com.PrestaShop.test1.Titles.signIn" finished-at="2020-01-30T20:54:21 MSK">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Titles.checkTitleCustomer()[pri:0, instance:com.PrestaShop.test1.Titles@3506d826] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Titles.checkTitleCustomer()[pri:0, instance:com.PrestaShop.test1.Titles@3506d826] depends on not successfully finished methods
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkTitleCustomer -->
+        <test-method status="SKIP" signature="checkTitleCustomerService()[pri:0, instance:com.PrestaShop.test1.Titles@3506d826]" name="checkTitleCustomerService" duration-ms="0" started-at="2020-01-30T20:54:21 MSK" description="Проверка титула страницы на вкладке &quot;Служба поддержки&quot; после обновления страницы." depends-on-methods="com.PrestaShop.test1.Titles.signIn" finished-at="2020-01-30T20:54:21 MSK">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Titles.checkTitleCustomerService()[pri:0, instance:com.PrestaShop.test1.Titles@3506d826] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Titles.checkTitleCustomerService()[pri:0, instance:com.PrestaShop.test1.Titles@3506d826] depends on not successfully finished methods
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkTitleCustomerService -->
+        <test-method status="SKIP" signature="checkTitleDashboard()[pri:0, instance:com.PrestaShop.test1.Titles@3506d826]" name="checkTitleDashboard" duration-ms="0" started-at="2020-01-30T20:54:21 MSK" description="Проверка титула страницы на вкладке &quot;Dashboard&quot; после обновления страницы." depends-on-methods="com.PrestaShop.test1.Titles.signIn" finished-at="2020-01-30T20:54:21 MSK">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Titles.checkTitleDashboard()[pri:0, instance:com.PrestaShop.test1.Titles@3506d826] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Titles.checkTitleDashboard()[pri:0, instance:com.PrestaShop.test1.Titles@3506d826] depends on not successfully finished methods
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkTitleDashboard -->
+        <test-method status="SKIP" signature="checkTitleDelivery()[pri:0, instance:com.PrestaShop.test1.Titles@3506d826]" name="checkTitleDelivery" duration-ms="0" started-at="2020-01-30T20:54:21 MSK" description="Проверка титула страницы на вкладке &quot;Delivery&quot; после обновления страницы." depends-on-methods="com.PrestaShop.test1.Titles.signIn" finished-at="2020-01-30T20:54:21 MSK">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Titles.checkTitleDelivery()[pri:0, instance:com.PrestaShop.test1.Titles@3506d826] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Titles.checkTitleDelivery()[pri:0, instance:com.PrestaShop.test1.Titles@3506d826] depends on not successfully finished methods
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkTitleDelivery -->
+        <test-method status="SKIP" signature="checkTitleDesign()[pri:0, instance:com.PrestaShop.test1.Titles@3506d826]" name="checkTitleDesign" duration-ms="0" started-at="2020-01-30T20:54:21 MSK" description="Проверка титула страницы на вкладке &quot;Design&quot; после обновления страницы." depends-on-methods="com.PrestaShop.test1.Titles.signIn" finished-at="2020-01-30T20:54:21 MSK">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Titles.checkTitleDesign()[pri:0, instance:com.PrestaShop.test1.Titles@3506d826] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Titles.checkTitleDesign()[pri:0, instance:com.PrestaShop.test1.Titles@3506d826] depends on not successfully finished methods
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkTitleDesign -->
+        <test-method status="SKIP" signature="checkTitleInternational()[pri:0, instance:com.PrestaShop.test1.Titles@3506d826]" name="checkTitleInternational" duration-ms="0" started-at="2020-01-30T20:54:21 MSK" description="Проверка титула страницы на вкладке &quot;International&quot; после обновления страницы." depends-on-methods="com.PrestaShop.test1.Titles.signIn" finished-at="2020-01-30T20:54:21 MSK">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Titles.checkTitleInternational()[pri:0, instance:com.PrestaShop.test1.Titles@3506d826] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Titles.checkTitleInternational()[pri:0, instance:com.PrestaShop.test1.Titles@3506d826] depends on not successfully finished methods
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkTitleInternational -->
+        <test-method status="SKIP" signature="checkTitleModules()[pri:0, instance:com.PrestaShop.test1.Titles@3506d826]" name="checkTitleModules" duration-ms="0" started-at="2020-01-30T20:54:21 MSK" description="Проверка титула страницы на вкладке &quot;Modules&quot; после обновления страницы." depends-on-methods="com.PrestaShop.test1.Titles.signIn" finished-at="2020-01-30T20:54:21 MSK">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Titles.checkTitleModules()[pri:0, instance:com.PrestaShop.test1.Titles@3506d826] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Titles.checkTitleModules()[pri:0, instance:com.PrestaShop.test1.Titles@3506d826] depends on not successfully finished methods
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkTitleModules -->
+        <test-method status="SKIP" signature="checkTitleOrder()[pri:0, instance:com.PrestaShop.test1.Titles@3506d826]" name="checkTitleOrder" duration-ms="0" started-at="2020-01-30T20:54:21 MSK" description="Проверка титула страницы на вкладке &quot;Заказы&quot; после обновления страницы." depends-on-methods="com.PrestaShop.test1.Titles.signIn" finished-at="2020-01-30T20:54:21 MSK">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Titles.checkTitleOrder()[pri:0, instance:com.PrestaShop.test1.Titles@3506d826] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Titles.checkTitleOrder()[pri:0, instance:com.PrestaShop.test1.Titles@3506d826] depends on not successfully finished methods
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkTitleOrder -->
+        <test-method status="SKIP" signature="checkTitlePayment()[pri:0, instance:com.PrestaShop.test1.Titles@3506d826]" name="checkTitlePayment" duration-ms="0" started-at="2020-01-30T20:54:21 MSK" description="Проверка титула страницы на вкладке &quot;Способ оплаты&quot; после обновления страницы." depends-on-methods="com.PrestaShop.test1.Titles.signIn" finished-at="2020-01-30T20:54:21 MSK">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Titles.checkTitlePayment()[pri:0, instance:com.PrestaShop.test1.Titles@3506d826] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Titles.checkTitlePayment()[pri:0, instance:com.PrestaShop.test1.Titles@3506d826] depends on not successfully finished methods
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkTitlePayment -->
+        <test-method status="SKIP" signature="checkTitleShopParameters()[pri:0, instance:com.PrestaShop.test1.Titles@3506d826]" name="checkTitleShopParameters" duration-ms="0" started-at="2020-01-30T20:54:21 MSK" description="Проверка титула страницы на вкладке &quot;Shop Parameters&quot; после обновления страницы." depends-on-methods="com.PrestaShop.test1.Titles.signIn" finished-at="2020-01-30T20:54:21 MSK">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Titles.checkTitleShopParameters()[pri:0, instance:com.PrestaShop.test1.Titles@3506d826] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Titles.checkTitleShopParameters()[pri:0, instance:com.PrestaShop.test1.Titles@3506d826] depends on not successfully finished methods
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkTitleShopParameters -->
+        <test-method status="SKIP" signature="checkTitleStatistics()[pri:0, instance:com.PrestaShop.test1.Titles@3506d826]" name="checkTitleStatistics" duration-ms="0" started-at="2020-01-30T20:54:21 MSK" description="Проверка титула страницы на вкладке &quot;Статистика&quot; после обновления страницы." depends-on-methods="com.PrestaShop.test1.Titles.signIn" finished-at="2020-01-30T20:54:21 MSK">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Titles.checkTitleStatistics()[pri:0, instance:com.PrestaShop.test1.Titles@3506d826] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Titles.checkTitleStatistics()[pri:0, instance:com.PrestaShop.test1.Titles@3506d826] depends on not successfully finished methods
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkTitleStatistics -->
+        <test-method name="logOut" signature="logOut()[pri:0, instance:com.PrestaShop.test1.Titles@3506d826]" depends-on-groups="title" status="SKIP" duration-ms="0" finished-at="2020-01-30T20:54:21 MSK" started-at="2020-01-30T20:54:21 MSK" depends-on-methods="com.PrestaShop.test1.Titles.signIn" description="Выход с аккаунта.">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Titles.logOut()[pri:0, instance:com.PrestaShop.test1.Titles@3506d826] depends on not successfully finished methods in group "title"]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Titles.logOut()[pri:0, instance:com.PrestaShop.test1.Titles@3506d826] depends on not successfully finished methods in group "title"
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logOut -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.PrestaShop.test2.AddNewCategory@3a60c416]" name="closeBrowser" is-config="true" duration-ms="65" started-at="2018-07-28T15:00:08Z" description="Закрытие браузера." finished-at="2018-07-28T15:00:08Z">
+        <test-method status="SKIP" signature="afterTest(org.testng.ITestContext)[pri:0, instance:com.PrestaShop.test1.Titles@3506d826]" name="afterTest" is-config="true" duration-ms="-1580406861717" started-at="2020-01-30T20:54:21 MSK" finished-at="1970-01-01T03:00:00 MSK">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- closeBrowser -->
+        </test-method> <!-- afterTest -->
+      </class> <!-- com.PrestaShop.test1.Titles -->
+    </test> <!-- Check titles. -->
+    <test name="Check the addition of a new category." duration-ms="250" started-at="2020-01-30T20:54:21 MSK" finished-at="2020-01-30T20:54:22 MSK">
+      <class name="com.PrestaShop.test2.AddNewCategory">
+        <test-method status="SKIP" signature="signIn(java.lang.String, java.lang.String)[pri:0, instance:com.PrestaShop.test2.AddNewCategory@11e33bac]" name="signIn" duration-ms="0" started-at="2020-01-30T20:54:21 MSK" description="Вход в админ панель." data-provider="getLoginAndPassword" finished-at="2020-01-30T20:54:21 MSK">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signIn -->
+        <test-method status="SKIP" signature="beforeTest(org.testng.ITestContext)[pri:0, instance:com.PrestaShop.test2.AddNewCategory@11e33bac]" name="beforeTest" is-config="true" duration-ms="-1580406861904" started-at="2020-01-30T20:54:21 MSK" finished-at="1970-01-01T03:00:00 MSK">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="SKIP" signature="categorySection()[pri:0, instance:com.PrestaShop.test2.AddNewCategory@11e33bac]" name="categorySection" duration-ms="0" started-at="2020-01-30T20:54:22 MSK" description="Переход в раздел категории товаров." depends-on-methods="com.PrestaShop.test2.AddNewCategory.signIn" finished-at="2020-01-30T20:54:22 MSK">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method AddNewCategory.categorySection()[pri:0, instance:com.PrestaShop.test2.AddNewCategory@11e33bac] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method AddNewCategory.categorySection()[pri:0, instance:com.PrestaShop.test2.AddNewCategory@11e33bac] depends on not successfully finished methods
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- categorySection -->
+        <test-method status="SKIP" signature="addNewCategory()[pri:0, instance:com.PrestaShop.test2.AddNewCategory@11e33bac]" name="addNewCategory" duration-ms="0" started-at="2020-01-30T20:54:22 MSK" description="Добавление новой категории." depends-on-methods="com.PrestaShop.test2.AddNewCategory.categorySection" finished-at="2020-01-30T20:54:22 MSK">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method AddNewCategory.addNewCategory()[pri:0, instance:com.PrestaShop.test2.AddNewCategory@11e33bac] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method AddNewCategory.addNewCategory()[pri:0, instance:com.PrestaShop.test2.AddNewCategory@11e33bac] depends on not successfully finished methods
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addNewCategory -->
+        <test-method status="SKIP" signature="checkingNewCategory()[pri:0, instance:com.PrestaShop.test2.AddNewCategory@11e33bac]" name="checkingNewCategory" duration-ms="0" started-at="2020-01-30T20:54:22 MSK" description="Проверка созданной категории." depends-on-methods="com.PrestaShop.test2.AddNewCategory.addNewCategory" finished-at="2020-01-30T20:54:22 MSK">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method AddNewCategory.checkingNewCategory()[pri:0, instance:com.PrestaShop.test2.AddNewCategory@11e33bac] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method AddNewCategory.checkingNewCategory()[pri:0, instance:com.PrestaShop.test2.AddNewCategory@11e33bac] depends on not successfully finished methods
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkingNewCategory -->
+        <test-method status="SKIP" signature="logOut()[pri:0, instance:com.PrestaShop.test2.AddNewCategory@11e33bac]" name="logOut" duration-ms="0" started-at="2020-01-30T20:54:22 MSK" description="Выход с аккаунта." depends-on-methods="com.PrestaShop.test2.AddNewCategory.checkingNewCategory" finished-at="2020-01-30T20:54:22 MSK">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method AddNewCategory.logOut()[pri:0, instance:com.PrestaShop.test2.AddNewCategory@11e33bac] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method AddNewCategory.logOut()[pri:0, instance:com.PrestaShop.test2.AddNewCategory@11e33bac] depends on not successfully finished methods
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logOut -->
+        <test-method status="SKIP" signature="afterTest(org.testng.ITestContext)[pri:0, instance:com.PrestaShop.test2.AddNewCategory@11e33bac]" name="afterTest" is-config="true" duration-ms="-1580406862139" started-at="2020-01-30T20:54:22 MSK" finished-at="1970-01-01T03:00:00 MSK">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
       </class> <!-- com.PrestaShop.test2.AddNewCategory -->
     </test> <!-- Check the addition of a new category. -->
+    <test name="Adding and checking a new product." duration-ms="313" started-at="2020-01-30T20:54:22 MSK" finished-at="2020-01-30T20:54:22 MSK">
+      <class name="com.PrestaShop.test3.CreatingANewProduct">
+        <test-method status="SKIP" signature="beforeTest(org.testng.ITestContext)[pri:0, instance:com.PrestaShop.test3.CreatingANewProduct@41b0ae4c]" name="beforeTest" is-config="true" duration-ms="-1580406862264" started-at="2020-01-30T20:54:22 MSK" finished-at="1970-01-01T03:00:00 MSK">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="SKIP" signature="signIn(java.lang.String, java.lang.String)[pri:0, instance:com.PrestaShop.test3.CreatingANewProduct@41b0ae4c]" name="signIn" duration-ms="0" started-at="2020-01-30T20:54:22 MSK" description="Вход в админ панель сайта." data-provider="getLoginAndPassword" finished-at="2020-01-30T20:54:22 MSK">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signIn -->
+        <test-method status="SKIP" signature="productSection()[pri:0, instance:com.PrestaShop.test3.CreatingANewProduct@41b0ae4c]" name="productSection" duration-ms="0" started-at="2020-01-30T20:54:22 MSK" description="Переход в раздел товаров." depends-on-methods="com.PrestaShop.test3.CreatingANewProduct.signIn" finished-at="2020-01-30T20:54:22 MSK">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method CreatingANewProduct.productSection()[pri:0, instance:com.PrestaShop.test3.CreatingANewProduct@41b0ae4c] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method CreatingANewProduct.productSection()[pri:0, instance:com.PrestaShop.test3.CreatingANewProduct@41b0ae4c] depends on not successfully finished methods
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- productSection -->
+        <test-method status="SKIP" signature="newProduct()[pri:0, instance:com.PrestaShop.test3.CreatingANewProduct@41b0ae4c]" name="newProduct" duration-ms="0" started-at="2020-01-30T20:54:22 MSK" description="Создание нового товара." depends-on-methods="com.PrestaShop.test3.CreatingANewProduct.productSection" finished-at="2020-01-30T20:54:22 MSK">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method CreatingANewProduct.newProduct()[pri:0, instance:com.PrestaShop.test3.CreatingANewProduct@41b0ae4c] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method CreatingANewProduct.newProduct()[pri:0, instance:com.PrestaShop.test3.CreatingANewProduct@41b0ae4c] depends on not successfully finished methods
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- newProduct -->
+        <test-method status="SKIP" signature="productActivation()[pri:0, instance:com.PrestaShop.test3.CreatingANewProduct@41b0ae4c]" name="productActivation" duration-ms="0" started-at="2020-01-30T20:54:22 MSK" description="Сохранение и активация нового товара." depends-on-methods="com.PrestaShop.test3.CreatingANewProduct.productSection" finished-at="2020-01-30T20:54:22 MSK">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method CreatingANewProduct.productActivation()[pri:0, instance:com.PrestaShop.test3.CreatingANewProduct@41b0ae4c] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method CreatingANewProduct.productActivation()[pri:0, instance:com.PrestaShop.test3.CreatingANewProduct@41b0ae4c] depends on not successfully finished methods
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- productActivation -->
+        <test-method status="SKIP" signature="logOut()[pri:0, instance:com.PrestaShop.test3.CreatingANewProduct@41b0ae4c]" name="logOut" duration-ms="0" started-at="2020-01-30T20:54:22 MSK" description="Выход из админ панели сайта." depends-on-methods="com.PrestaShop.test3.CreatingANewProduct.productActivation" finished-at="2020-01-30T20:54:22 MSK">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method CreatingANewProduct.logOut()[pri:0, instance:com.PrestaShop.test3.CreatingANewProduct@41b0ae4c] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method CreatingANewProduct.logOut()[pri:0, instance:com.PrestaShop.test3.CreatingANewProduct@41b0ae4c] depends on not successfully finished methods
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logOut -->
+        <test-method status="SKIP" signature="checkNewProduct()[pri:0, instance:com.PrestaShop.test3.CreatingANewProduct@41b0ae4c]" name="checkNewProduct" duration-ms="0" started-at="2020-01-30T20:54:22 MSK" description="Проверка созданного товара." depends-on-methods="com.PrestaShop.test3.CreatingANewProduct.logOut" finished-at="2020-01-30T20:54:22 MSK">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method CreatingANewProduct.checkNewProduct()[pri:0, instance:com.PrestaShop.test3.CreatingANewProduct@41b0ae4c] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method CreatingANewProduct.checkNewProduct()[pri:0, instance:com.PrestaShop.test3.CreatingANewProduct@41b0ae4c] depends on not successfully finished methods
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkNewProduct -->
+        <test-method status="SKIP" signature="afterTest(org.testng.ITestContext)[pri:0, instance:com.PrestaShop.test3.CreatingANewProduct@41b0ae4c]" name="afterTest" is-config="true" duration-ms="-1580406862575" started-at="2020-01-30T20:54:22 MSK" finished-at="1970-01-01T03:00:00 MSK">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- com.PrestaShop.test3.CreatingANewProduct -->
+    </test> <!-- Adding and checking a new product. -->
+    <test name="Ordering." duration-ms="245" started-at="2020-01-30T20:54:22 MSK" finished-at="2020-01-30T20:54:22 MSK">
+      <class name="com.PrestaShop.test4.Ordering">
+        <test-method status="FAIL" signature="setUp(java.lang.String, java.lang.String)[pri:0, instance:com.PrestaShop.test4.Ordering@62ce72ff]" name="setUp" is-config="true" duration-ms="20265" started-at="2020-01-30T20:53:59 MSK" description="Инициализация браузера." finished-at="2020-01-30T20:54:19 MSK">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Android]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[An unknown server-side error occurred while processing the command. Original error: No Chromedriver found that can automate Chrome '79.0.3945'. See https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/web/chromedriver.md for more details. You could also try to enable automated chromedrivers download server feature
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-G6T0SJ9', ip: '192.168.152.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
+Driver info: driver.version: RemoteWebDriver
+remote stacktrace: UnknownError: An unknown server-side error occurred while processing the command. Original error: No Chromedriver found that can automate Chrome '79.0.3945'. See https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/web/chromedriver.md for more details. You could also try to enable automated chromedrivers download server feature
+    at getResponseForW3CError (C:\Users\Admin\AppData\Roaming\npm\node_modules\appium\node_modules\appium-base-driver\lib\protocol\errors.js:804:9)
+    at asyncHandler (C:\Users\Admin\AppData\Roaming\npm\node_modules\appium\node_modules\appium-base-driver\lib\protocol\protocol.js:388:37)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: No Chromedriver found that can automate Chrome '79.0.3945'. See https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/web/chromedriver.md for more details. You could also try to enable automated chromedrivers download server feature
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-G6T0SJ9', ip: '192.168.152.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
+Driver info: driver.version: RemoteWebDriver
+remote stacktrace: UnknownError: An unknown server-side error occurred while processing the command. Original error: No Chromedriver found that can automate Chrome '79.0.3945'. See https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/web/chromedriver.md for more details. You could also try to enable automated chromedrivers download server feature
+    at getResponseForW3CError (C:\Users\Admin\AppData\Roaming\npm\node_modules\appium\node_modules\appium-base-driver\lib\protocol\errors.js:804:9)
+    at asyncHandler (C:\Users\Admin\AppData\Roaming\npm\node_modules\appium\node_modules\appium-base-driver\lib\protocol\protocol.js:388:37)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+at java.util.Spliterators$ArraySpliterator.tryAdvance(Unknown Source)
+at java.util.stream.ReferencePipeline.forEachWithCancel(Unknown Source)
+at java.util.stream.AbstractPipeline.copyIntoWithCancel(Unknown Source)
+at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+at java.util.stream.FindOps$FindOp.evaluateSequential(Unknown Source)
+at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+at java.util.stream.ReferencePipeline.findFirst(Unknown Source)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:144)
+at com.PrestaShop.InitialConfiguration.InstanceDriver$1.addBrowser(InstanceDriver.java:30)
+at com.PrestaShop.InitialConfiguration.InitialConfiguration.setUp(InitialConfiguration.java:31)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:340)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:294)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:345)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="SKIP" signature="beforeTest(org.testng.ITestContext)[pri:0, instance:com.PrestaShop.test4.Ordering@62ce72ff]" name="beforeTest" is-config="true" duration-ms="-1580406862709" started-at="2020-01-30T20:54:22 MSK" finished-at="1970-01-01T03:00:00 MSK">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="SKIP" signature="choiceOfRandomGoods()[pri:0, instance:com.PrestaShop.test4.Ordering@62ce72ff]" name="choiceOfRandomGoods" duration-ms="0" started-at="2020-01-30T20:54:22 MSK" description="Выбор случайного товара." finished-at="2020-01-30T20:54:22 MSK">
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[An unknown server-side error occurred while processing the command. Original error: No Chromedriver found that can automate Chrome '79.0.3945'. See https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/web/chromedriver.md for more details. You could also try to enable automated chromedrivers download server feature
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-G6T0SJ9', ip: '192.168.152.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
+Driver info: driver.version: RemoteWebDriver
+remote stacktrace: UnknownError: An unknown server-side error occurred while processing the command. Original error: No Chromedriver found that can automate Chrome '79.0.3945'. See https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/web/chromedriver.md for more details. You could also try to enable automated chromedrivers download server feature
+    at getResponseForW3CError (C:\Users\Admin\AppData\Roaming\npm\node_modules\appium\node_modules\appium-base-driver\lib\protocol\errors.js:804:9)
+    at asyncHandler (C:\Users\Admin\AppData\Roaming\npm\node_modules\appium\node_modules\appium-base-driver\lib\protocol\protocol.js:388:37)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: No Chromedriver found that can automate Chrome '79.0.3945'. See https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/web/chromedriver.md for more details. You could also try to enable automated chromedrivers download server feature
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-G6T0SJ9', ip: '192.168.152.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
+Driver info: driver.version: RemoteWebDriver
+remote stacktrace: UnknownError: An unknown server-side error occurred while processing the command. Original error: No Chromedriver found that can automate Chrome '79.0.3945'. See https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/web/chromedriver.md for more details. You could also try to enable automated chromedrivers download server feature
+    at getResponseForW3CError (C:\Users\Admin\AppData\Roaming\npm\node_modules\appium\node_modules\appium-base-driver\lib\protocol\errors.js:804:9)
+    at asyncHandler (C:\Users\Admin\AppData\Roaming\npm\node_modules\appium\node_modules\appium-base-driver\lib\protocol\protocol.js:388:37)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+at java.util.Spliterators$ArraySpliterator.tryAdvance(Unknown Source)
+at java.util.stream.ReferencePipeline.forEachWithCancel(Unknown Source)
+at java.util.stream.AbstractPipeline.copyIntoWithCancel(Unknown Source)
+at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+at java.util.stream.FindOps$FindOp.evaluateSequential(Unknown Source)
+at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+at java.util.stream.ReferencePipeline.findFirst(Unknown Source)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:144)
+at com.PrestaShop.InitialConfiguration.InstanceDriver$1.addBrowser(InstanceDriver.java:30)
+at com.PrestaShop.InitialConfiguration.InitialConfiguration.setUp(InitialConfiguration.java:31)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:340)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:294)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:345)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- choiceOfRandomGoods -->
+        <test-method status="SKIP" signature="productProperties()[pri:0, instance:com.PrestaShop.test4.Ordering@62ce72ff]" name="productProperties" duration-ms="0" started-at="2020-01-30T20:54:22 MSK" description="Взятие свойств товара." depends-on-methods="com.PrestaShop.test4.Ordering.choiceOfRandomGoods" finished-at="2020-01-30T20:54:22 MSK">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Ordering.productProperties()[pri:0, instance:com.PrestaShop.test4.Ordering@62ce72ff] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Ordering.productProperties()[pri:0, instance:com.PrestaShop.test4.Ordering@62ce72ff] depends on not successfully finished methods
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- productProperties -->
+        <test-method status="SKIP" signature="addingProductToCart()[pri:0, instance:com.PrestaShop.test4.Ordering@62ce72ff]" name="addingProductToCart" duration-ms="0" started-at="2020-01-30T20:54:22 MSK" description="Добавление товара в корзину." depends-on-methods="com.PrestaShop.test4.Ordering.productProperties" finished-at="2020-01-30T20:54:22 MSK">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Ordering.addingProductToCart()[pri:0, instance:com.PrestaShop.test4.Ordering@62ce72ff] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Ordering.addingProductToCart()[pri:0, instance:com.PrestaShop.test4.Ordering@62ce72ff] depends on not successfully finished methods
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addingProductToCart -->
+        <test-method status="SKIP" signature="checkingPropertiesProduct()[pri:0, instance:com.PrestaShop.test4.Ordering@62ce72ff]" name="checkingPropertiesProduct" duration-ms="0" started-at="2020-01-30T20:54:22 MSK" description="Проверка свойств продукта." depends-on-methods="com.PrestaShop.test4.Ordering.addingProductToCart" finished-at="2020-01-30T20:54:22 MSK">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Ordering.checkingPropertiesProduct()[pri:0, instance:com.PrestaShop.test4.Ordering@62ce72ff] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Ordering.checkingPropertiesProduct()[pri:0, instance:com.PrestaShop.test4.Ordering@62ce72ff] depends on not successfully finished methods
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkingPropertiesProduct -->
+        <test-method name="inputCustomerData" signature="inputCustomerData(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.PrestaShop.test4.Ordering@62ce72ff]" status="SKIP" duration-ms="0" finished-at="2020-01-30T20:54:22 MSK" started-at="2020-01-30T20:54:22 MSK" depends-on-methods="com.PrestaShop.test4.Ordering.checkingPropertiesProduct" data-provider="getCustomerData" description="Ввод личных данных заказчика.">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Ordering.inputCustomerData(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.PrestaShop.test4.Ordering@62ce72ff] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Ordering.inputCustomerData(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.PrestaShop.test4.Ordering@62ce72ff] depends on not successfully finished methods
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- inputCustomerData -->
+        <test-method name="inputDeliveryAddressData" signature="inputDeliveryAddressData(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.PrestaShop.test4.Ordering@62ce72ff]" status="SKIP" duration-ms="0" finished-at="2020-01-30T20:54:22 MSK" started-at="2020-01-30T20:54:22 MSK" depends-on-methods="com.PrestaShop.test4.Ordering.inputCustomerData" data-provider="getCustomerAddress" description="Ввод адресса доставки товара.">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Ordering.inputDeliveryAddressData(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.PrestaShop.test4.Ordering@62ce72ff] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Ordering.inputDeliveryAddressData(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.PrestaShop.test4.Ordering@62ce72ff] depends on not successfully finished methods
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- inputDeliveryAddressData -->
+        <test-method status="SKIP" signature="deliveryMethod()[pri:0, instance:com.PrestaShop.test4.Ordering@62ce72ff]" name="deliveryMethod" duration-ms="0" started-at="2020-01-30T20:54:22 MSK" description="Доставка товара." depends-on-methods="com.PrestaShop.test4.Ordering.inputDeliveryAddressData" finished-at="2020-01-30T20:54:22 MSK">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Ordering.deliveryMethod()[pri:0, instance:com.PrestaShop.test4.Ordering@62ce72ff] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Ordering.deliveryMethod()[pri:0, instance:com.PrestaShop.test4.Ordering@62ce72ff] depends on not successfully finished methods
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deliveryMethod -->
+        <test-method status="SKIP" signature="paymentMethod()[pri:0, instance:com.PrestaShop.test4.Ordering@62ce72ff]" name="paymentMethod" duration-ms="0" started-at="2020-01-30T20:54:22 MSK" description="Оплата товара." depends-on-methods="com.PrestaShop.test4.Ordering.deliveryMethod" finished-at="2020-01-30T20:54:22 MSK">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Ordering.paymentMethod()[pri:0, instance:com.PrestaShop.test4.Ordering@62ce72ff] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Ordering.paymentMethod()[pri:0, instance:com.PrestaShop.test4.Ordering@62ce72ff] depends on not successfully finished methods
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- paymentMethod -->
+        <test-method status="SKIP" signature="checkingPropertiesOrder()[pri:0, instance:com.PrestaShop.test4.Ordering@62ce72ff]" name="checkingPropertiesOrder" duration-ms="0" started-at="2020-01-30T20:54:22 MSK" description="Проверка свойств товара в заказе." depends-on-methods="com.PrestaShop.test4.Ordering.paymentMethod" finished-at="2020-01-30T20:54:22 MSK">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Ordering.checkingPropertiesOrder()[pri:0, instance:com.PrestaShop.test4.Ordering@62ce72ff] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Ordering.checkingPropertiesOrder()[pri:0, instance:com.PrestaShop.test4.Ordering@62ce72ff] depends on not successfully finished methods
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkingPropertiesOrder -->
+        <test-method status="SKIP" signature="checkingQuantityProduct()[pri:0, instance:com.PrestaShop.test4.Ordering@62ce72ff]" name="checkingQuantityProduct" duration-ms="0" started-at="2020-01-30T20:54:22 MSK" description="Проверка количества товара после заказа." depends-on-methods="com.PrestaShop.test4.Ordering.checkingPropertiesOrder" finished-at="2020-01-30T20:54:22 MSK">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Ordering.checkingQuantityProduct()[pri:0, instance:com.PrestaShop.test4.Ordering@62ce72ff] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Ordering.checkingQuantityProduct()[pri:0, instance:com.PrestaShop.test4.Ordering@62ce72ff] depends on not successfully finished methods
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:99)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkingQuantityProduct -->
+        <test-method status="SKIP" signature="afterTest(org.testng.ITestContext)[pri:0, instance:com.PrestaShop.test4.Ordering@62ce72ff]" name="afterTest" is-config="true" duration-ms="-1580406862952" started-at="2020-01-30T20:54:22 MSK" finished-at="1970-01-01T03:00:00 MSK">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method status="SKIP" signature="afterSuite()[pri:0, instance:com.PrestaShop.test4.Ordering@62ce72ff]" name="afterSuite" is-config="true" duration-ms="-1580406863470" started-at="2020-01-30T20:54:23 MSK" finished-at="1970-01-01T03:00:00 MSK">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- com.PrestaShop.test4.Ordering -->
+    </test> <!-- Ordering. -->
   </suite> <!-- PrestaShop_Chrome -->
 </testng-results>

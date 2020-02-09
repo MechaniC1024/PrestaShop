@@ -3,7 +3,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.shop</groupId>
+	<groupId>com.PrestaShop</groupId>
 	<artifactId>PrestaShop</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
@@ -13,7 +13,28 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<java.version>1.8</java.version>
+
+		<build-helper-maven-plugin.version>3.0.0</build-helper-maven-plugin.version>
+		<maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
+		<maven-surefire-plugin.version>2.22.2</maven-surefire-plugin.version>
 		<aspectj.version>1.9.1</aspectj.version>
+		<maven-resources-plugin.version>3.1.0</maven-resources-plugin.version>
+		<allure-maven.version>2.10.0</allure-maven.version>
+		<allure.reportVersion>2.13.1</allure.reportVersion>
+
+		<selenium-java.version>3.141.59</selenium-java.version>
+		<testng.version>7.0.0</testng.version>
+		<guice.version>4.2.2</guice.version>
+		<slf4j-simple.version>1.7.29</slf4j-simple.version>
+		<allure-testng.version>2.13.1</allure-testng.version>
+		<java-client.version>7.3.0</java-client.version>
+		<log4j-core.version>2.13.0</log4j-core.version>
+		<webdrivermanager.version>3.7.1</webdrivermanager.version>
+
+		<chrome>XML_RUN\Run_all_test_Chrome.xml</chrome>
+		<firefox>XML_RUN\Run_all_test_Firefox.xml</firefox>
+		<android>XML_RUN\Run_all_test_Android.xml</android>
 	</properties>
 
 	<build>
@@ -22,7 +43,7 @@
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>build-helper-maven-plugin</artifactId>
-				<version>3.0.0</version>
+				<version>${build-helper-maven-plugin.version}</version>
 				<executions>
 					<execution>
 						<id>add-framework</id>
@@ -42,23 +63,29 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.7.0</version>
+				<version>${maven-compiler-plugin.version}</version>
 				<configuration>
-					<source>1.8</source>
-					<target>1.8</target>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
 				</configuration>
 			</plugin>
 
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
-				<version>2.21.0</version>
+				<version>${maven-surefire-plugin.version}</version>
 				<configuration>
 					<suiteXmlFiles>
-						<suiteXmlFile>XML_RUN\Run_all_test_Chrome.xml</suiteXmlFile>
-					    <suiteXmlFile>XML_RUN\Run_all_test_Firefox.xml</suiteXmlFile> 
-						<suiteXmlFile>XML_RUN\Run_all_test_Android.xml</suiteXmlFile>
+						<suiteXmlFile>${chrome}</suiteXmlFile>
+						<suiteXmlFile>${firefox}</suiteXmlFile>
+						<suiteXmlFile>${android}</suiteXmlFile>
 					</suiteXmlFiles>
+					<properties>
+						<property>
+							<name>suitethreadpoolsize</name>
+							<value>2</value>
+						</property>
+					</properties>
 					<argLine>
 						-javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
 					</argLine>
@@ -75,7 +102,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-resources-plugin</artifactId>
-				<version>3.1.0</version>
+				<version>${maven-resources-plugin.version}</version>
 				<executions>
 					<execution>
 						<id>copy-allure-environment</id>
@@ -87,9 +114,10 @@
 							<outputDirectory>${basedir}/target/allure-results</outputDirectory>
 							<resources>
 								<resource>
-									<directory>src/test/resources</directory>
+									<directory>src/test/resources/AllureFiles</directory>
 									<includes>
 										<include>environment.xml</include>
+										<include>categories.json</include>
 									</includes>
 								</resource>
 							</resources>
@@ -107,11 +135,11 @@
 			<plugin>
 				<groupId>io.qameta.allure</groupId>
 				<artifactId>allure-maven</artifactId>
-				<version>2.9</version>
+				<version>${allure-maven.version}</version>
 				<configuration>
-					<propertiesFilePath>${basedir}/resources/allure.properties</propertiesFilePath>
+					<propertiesFilePath>${basedir}/resources/allure.properties</propertiesFilePath>		
 					<reportDirectory>${basedir}/target/allure-report</reportDirectory>
-					<reportVersion>2.6.0</reportVersion>
+					<reportVersion>${allure.reportVersion}</reportVersion>
 				</configuration>
 			</plugin>
 		</plugins>
@@ -122,47 +150,59 @@
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
-			<version>3.12.0</version>
+			<version>${selenium-java.version}</version>
+			<scope>test</scope>
 		</dependency>
 
 		<dependency>
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
-			<version>6.14.3</version>
+			<version>${testng.version}</version>
 			<scope>test</scope>
 		</dependency>
 
 		<dependency>
 			<groupId>com.google.inject</groupId>
 			<artifactId>guice</artifactId>
-			<version>4.2.0</version>
+			<version>${guice.version}</version>
+			<scope>test</scope>
 		</dependency>
 
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-simple</artifactId>
-			<version>1.7.25</version>
+			<version>${slf4j-simple.version}</version>
 			<scope>test</scope>
 		</dependency>
 
 		<dependency>
 			<groupId>io.qameta.allure</groupId>
 			<artifactId>allure-testng</artifactId>
-			<version>2.6.0</version>
+			<version>${allure-testng.version}</version>
 			<scope>test</scope>
 		</dependency>
 
 		<dependency>
 			<groupId>io.appium</groupId>
 			<artifactId>java-client</artifactId>
-			<version>6.1.0</version>
+			<version>${java-client.version}</version>
+			<scope>test</scope>
 		</dependency>
 
 		<dependency>
-			<groupId>log4j</groupId>
-			<artifactId>log4j</artifactId>
-			<version>1.2.17</version>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-core</artifactId>
+			<version>${log4j-core.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>io.github.bonigarcia</groupId>
+			<artifactId>webdrivermanager</artifactId>
+			<version>${webdrivermanager.version}</version>
+			<scope>test</scope>
 		</dependency>
 
 	</dependencies>
+
 </project>

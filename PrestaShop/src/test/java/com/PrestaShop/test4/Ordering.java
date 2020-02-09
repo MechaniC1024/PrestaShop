@@ -1,7 +1,6 @@
 package com.PrestaShop.test4;
 
 import static com.PrestaShop.DataResources.ProcessingData.*;
-import static com.PrestaShop.Report.Report.*;
 
 import org.testng.annotations.Test;
 
@@ -9,8 +8,10 @@ import com.PrestaShop.DataResources.ProcessingData;
 import com.PrestaShop.InitialConfiguration.InitialConfiguration;
 import com.PrestaShop.Store.*;
 
-import io.qameta.allure.Step;
+import io.qameta.allure.*;
 
+@Epic("Тестовый набор 4.")
+@Feature("Проверка покупки товара.")
 public class Ordering extends InitialConfiguration{
 	
 	private StringBuilder nameProduct = new StringBuilder();
@@ -34,6 +35,7 @@ public class Ordering extends InitialConfiguration{
 	private ConfirmationOfAnOrder order;
 
 	@Step("Выбор случайного товара из предложенных товаров.")
+	@Story("Выбор случайного товара из предложенных товаров.")
 	@Test(description = "Выбор случайного товара.")
 	public void choiceOfRandomGoods() {
 		
@@ -49,20 +51,20 @@ public class Ordering extends InitialConfiguration{
 	}
 	
 	@Step("Получаем свойства выбранного товара.")
+	@Story("Получаем свойства выбранного товара.")
 	@Test(dependsOnMethods = "choiceOfRandomGoods", description = "Взятие свойств товара.")
 	public void productProperties() {
 			
 		product.
 			getNameProduct(nameProduct).
 			getPriceProduct(priceProduct).
-			getQuantityProduct(quantityAllProduct);
-			
-		addAttachmentToReport("Имя товара.", nameProduct);
-		addAttachmentToReport("Цена товара.", priceProduct);
-		addAttachmentToReport("Количество товара.", quantityAllProduct);
+			getQuantityProduct(quantityAllProduct).
+			addPropertyOfProductToReport(nameProduct, priceProduct, quantityAllProduct);
+
 	}	
 	
 	@Step("Добавляем выбранный товар в корзину.")
+	@Story("Добавляем выбранный товар в корзину.")
 	@Test(dependsOnMethods = "productProperties", description = "Добавление товара в корзину.")
 	public void addingProductToCart() {
 	
@@ -73,6 +75,7 @@ public class Ordering extends InitialConfiguration{
 	}
 	
 	@Step("Проверяем свойства продукта добавленного в корзину.")
+	@Story("Проверяем свойства продукта добавленного в корзину.")
 	@Test(dependsOnMethods = "addingProductToCart", description = "Проверка свойств продукта.")
 	public void checkingPropertiesProduct() {
 		
@@ -81,14 +84,13 @@ public class Ordering extends InitialConfiguration{
 				checkNameProductInCart(nameProduct).
 				checkPriceProductInCart(priceProduct).
 				checkQuantityProductInCart(quantityProduct).
+				addPropertyOfProductToReport(nameProduct, priceProduct, quantityAllProduct).
 				clickOnPlaceOrder();
 		
-		addAttachmentToReport("Имя товара.", nameProduct);
-		addAttachmentToReport("Цена товара.", priceProduct);
-		addAttachmentToReport("Количество товара.", quantityAllProduct);
 	}	
 	
 	@Step("Личные данные заказчика для оформления товара.")
+	@Story("Личные данные заказчика для оформления товара.")
 	@Test(dependsOnMethods = "checkingPropertiesProduct", description = "Ввод личных данных заказчика.", dataProvider = "getCustomerData", dataProviderClass = ProcessingData.class)
 	public void inputCustomerData(String firstName, String lastName, String email) {
 		
@@ -101,11 +103,13 @@ public class Ordering extends InitialConfiguration{
 	}		
 	
 	@Step("Адресс заказчика для доставки товара.")
+	@Story("Адресс заказчика для доставки товара.")
 	@Test(dependsOnMethods = "inputCustomerData", description = "Ввод адресса доставки товара.", dataProvider = "getCustomerAddress", dataProviderClass = ProcessingData.class)
 	public void inputDeliveryAddressData(String address, String postcode, String city) {
 		
 		deliveryMethod = 
 			deliveryAddress.
+				addAddress().
 				inputAddress(address).
 				inputPostcode(postcode).
 				inputCity(city).
@@ -113,6 +117,7 @@ public class Ordering extends InitialConfiguration{
 	}	
 	
 	@Step("Доставка товара.")
+	@Story("Доставка товара.")
 	@Test(dependsOnMethods = "inputDeliveryAddressData", description = "Доставка товара.")
 	public void deliveryMethod() {
 		payment = 
@@ -121,6 +126,7 @@ public class Ordering extends InitialConfiguration{
 	}	
 	
 	@Step("Выбор случайного метода оплаты.")
+	@Story("Выбор случайного метода оплаты.")
 	@Test(dependsOnMethods = "deliveryMethod", description = "Оплата товара.")
 	public void paymentMethod() {
 		
@@ -132,6 +138,7 @@ public class Ordering extends InitialConfiguration{
 	}	
 	
 	@Step("Проверка свойств товара в заказе.")
+	@Story("Проверка свойств товара в заказе.")
 	@Test(dependsOnMethods = "paymentMethod", description = "Проверка свойств товара в заказе.")
 	public void checkingPropertiesOrder() {
 		
@@ -143,6 +150,7 @@ public class Ordering extends InitialConfiguration{
 	}	
 	
 	@Step("Проверка изменения количества товара после выполнения заказа.")
+	@Story("Проверка изменения количества товара после выполнения заказа.")
 	@Test(dependsOnMethods = "checkingPropertiesOrder", description = "Проверка количества товара после заказа.")
 	public void checkingQuantityProduct() {
 		

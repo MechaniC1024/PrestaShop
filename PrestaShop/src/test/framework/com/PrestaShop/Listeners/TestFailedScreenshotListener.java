@@ -19,7 +19,6 @@ import com.google.common.io.Files;
 
 import static com.PrestaShop.DataResources.ProcessingData.*;
 import static com.PrestaShop.Report.Report.*;
-import static com.PrestaShop.InitialConfiguration.InitialConfiguration.*;
 
 public class TestFailedScreenshotListener extends TestListenerAdapter {
 
@@ -55,7 +54,6 @@ public class TestFailedScreenshotListener extends TestListenerAdapter {
 	@Override
 	public void onTestFailure(ITestResult result) {
 		
-		log.debug("Снятие скриншота со страницы после упавшего теста.");
 		Object currentClass = result.getInstance();
 		RemoteWebDriver webDriver = ((InitialConfiguration) currentClass).getDriver();
 

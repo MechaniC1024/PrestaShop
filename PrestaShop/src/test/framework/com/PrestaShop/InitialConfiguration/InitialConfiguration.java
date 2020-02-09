@@ -1,88 +1,79 @@
 package com.PrestaShop.InitialConfiguration;
 
-import java.net.*;
+import java.util.List;
+import java.util.Map;
 
-import org.apache.log4j.Logger;
-import org.apache.log4j.PropertyConfigurator;
-import org.openqa.selenium.*;
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.remote.*;
+import org.testng.ITestContext;
 import org.testng.annotations.*;
 
-import static com.PrestaShop.DataResources.ProcessingData.*;
-
-import io.appium.java_client.remote.MobileCapabilityType;
 import io.qameta.allure.Step;
 
 public class InitialConfiguration {
 
+	public static final Platform platform = Platform.ANDROID;
+
 	private RemoteWebDriver driver;
+	static volatile Map<String, List<Driver>> mapOfBrowsers;
 
-	public static final Platform platform = Platform.LINUX;
-	public static Logger log = Logger.getLogger("LoggerReport");
-	
-	static {
-		String log4jConfigFile = "src" + sep + "test" + sep + "resources" + sep + "propertiesLog4j" + sep + "log4j.properties";
-        PropertyConfigurator.configure(log4jConfigFile);
-	}	
-	
+	private String browserSuite;
+	private String browserTest;
+
 	@Step("Браузер на котором выполняются тесты {browser}.")
-	@BeforeTest(description = "Инициализация браузера.")
-	@Parameters("browser")
-	public void setUp(@Optional("Chrome") String browser) {
+	@BeforeSuite(description = "Инициализация браузера.")
+	@Parameters({"browser", "threadCount"})
+	public void setUp(@Optional("Chrome") String browser, String threadCount) {
 
-		switch (browser) {
-		case "Chrome": {
-			System.setProperty("webdriver.chrome.driver", "Drivers" + sep + "chromedriver.exe");
-			DesiredCapabilities cap = DesiredCapabilities.chrome();
-			try {
-				driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), cap);
-			} catch (MalformedURLException e) {
-				e.printStackTrace();
+		browserSuite = browser;
+
+		DesiredCapabilities cap = Browsers.valueOf(browser.toUpperCase()).create();
+
+		InstanceDriver.INSTANCE_DRIVER.addBrowser(browser, Integer.parseInt(threadCount), cap);
+		mapOfBrowsers = InstanceDriver.INSTANCE_DRIVER.getDriver();
+		
+	}
+
+	@BeforeTest
+	public void beforeTest(ITestContext context) {
+
+		browserTest = context.getCurrentXmlTest().getName();
+		String browser = context.getCurrentXmlTest().getParameter("browser");
+
+		List<Driver> list = mapOfBrowsers.get(browser);
+
+		bre: while (true) {
+			cont: for (int i = 0; i < list.size(); i++) {
+				if (list.get(i).getFlag() == true) {
+					list.get(i).setFlag(false);
+					driver = list.get(i).getDriver();
+					//driver.manage().window().maximize();
+					break bre;
+				} else
+					continue cont;
 			}
-			;
-			driver.manage().window().maximize();
-			log.debug("Запущен браузер " + browser + ".");
-			break;
-
 		}
-		case "Firefox": {
-			System.setProperty("webdriver.gecko.driver", "Drivers" + sep + "geckodriver.exe");
-			DesiredCapabilities cap = DesiredCapabilities.firefox();
-			try {
-				driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), cap);
-			} catch (MalformedURLException e) {
-				e.printStackTrace();
+	}
+
+	@AfterTest
+	public void afterTest(ITestContext context) {
+
+		String afterBrowserTest = context.getCurrentXmlTest().getName();
+		String browser = context.getCurrentXmlTest().getParameter("browser");
+
+		List<Driver> list = mapOfBrowsers.get(browser);
+
+		if (afterBrowserTest.equals(browserTest)) {
+
+			for (int i = 0; i < list.size(); i++) {
+				if (driver == list.get(i).getDriver())
+					list.get(i).setFlag(true);
 			}
-			;
-			driver.manage().window().maximize();
-			log.debug("Запущен браузер " + browser + ".");
-			break;
-
 		}
-		case "Android": {
-			DesiredCapabilities cap = new DesiredCapabilities();
-
-			cap.setCapability(MobileCapabilityType.AUTOMATION_NAME, "UiAutomator2");
-			cap.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
-			cap.setCapability(MobileCapabilityType.PLATFORM_VERSION, "5.1");
-			cap.setCapability(MobileCapabilityType.DEVICE_NAME, "192.168.152.101:5555");
-			cap.setCapability(MobileCapabilityType.BROWSER_NAME, "Chrome");
-
-			try {
-				driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), cap);
-			} catch (MalformedURLException e) {
-				e.printStackTrace();
-			}
-			log.debug("Запущен на платформе " + browser + ".");
-			break;
-		}
-		}
-
 	}
 
 	public void setURL(String url) {
 
-		log.debug("Переход на страницу по адресу: " + url + ".");
 		driver.get(url);
 	}
 
@@ -91,12 +82,14 @@ public class InitialConfiguration {
 		return driver;
 	}
 
-	@AfterTest(description = "Закрытие браузера.")
-	public void closeBrowser() {
-				
-		if (driver != null) {
-			driver.quit();
-			log.debug("Работа браузера завершена.\n\n\n");
+	@AfterSuite
+	public void afterSuite() {
+
+		List<Driver> list = mapOfBrowsers.get(browserSuite);
+
+		for (int i = 0; i < list.size(); i++) {
+			list.get(i).getDriver().quit();
+
 		}
 	}
 }
