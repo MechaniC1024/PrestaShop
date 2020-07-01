@@ -29,7 +29,7 @@
 		<slf4j-simple.version>1.7.29</slf4j-simple.version>
 		<allure-testng.version>2.13.1</allure-testng.version>
 		<java-client.version>7.3.0</java-client.version>
-		<log4j-core.version>2.13.0</log4j-core.version>
+		<log4j-core.version>2.13.2</log4j-core.version>
 		<webdrivermanager.version>3.7.1</webdrivermanager.version>
 
 		<chrome>XML_RUN\Run_all_test_Chrome.xml</chrome>
