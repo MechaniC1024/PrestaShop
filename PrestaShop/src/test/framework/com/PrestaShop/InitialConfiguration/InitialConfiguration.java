@@ -15,23 +15,28 @@ public class InitialConfiguration {
 	public static final Platform platform = Platform.ANDROID;
 
 	private RemoteWebDriver driver;
-	static volatile Map<String, List<Driver>> mapOfBrowsers;
+	static volatile Map<String, List<InstanceDriver.Driver>> mapOfBrowsers;
 
 	private String browserSuite;
 	private String browserTest;
 
 	@Step("Браузер на котором выполняются тесты {browser}.")
 	@BeforeSuite(description = "Инициализация браузера.")
-	@Parameters({"browser", "threadCount"})
+	@Parameters({ "browser", "threadCount" })
 	public void setUp(@Optional("Chrome") String browser, String threadCount) {
 
 		browserSuite = browser;
 
 		DesiredCapabilities cap = Browsers.valueOf(browser.toUpperCase()).create();
+		
+//		cap.setCapability("enableVNC", true);
+//		cap.setCapability("enableLog", true);
+//		cap.setCapability("logName", browser + ".log");
+//		cap.setCapability("enableVideo", true);
+//		cap.setCapability("videoName", browser + ".mp4");
 
 		InstanceDriver.INSTANCE_DRIVER.addBrowser(browser, Integer.parseInt(threadCount), cap);
 		mapOfBrowsers = InstanceDriver.INSTANCE_DRIVER.getDriver();
-		
 	}
 
 	@BeforeTest
@@ -40,14 +45,13 @@ public class InitialConfiguration {
 		browserTest = context.getCurrentXmlTest().getName();
 		String browser = context.getCurrentXmlTest().getParameter("browser");
 
-		List<Driver> list = mapOfBrowsers.get(browser);
+		List<InstanceDriver.Driver> list = mapOfBrowsers.get(browser);
 
 		bre: while (true) {
 			cont: for (int i = 0; i < list.size(); i++) {
 				if (list.get(i).getFlag() == true) {
 					list.get(i).setFlag(false);
 					driver = list.get(i).getDriver();
-					//driver.manage().window().maximize();
 					break bre;
 				} else
 					continue cont;
@@ -61,7 +65,7 @@ public class InitialConfiguration {
 		String afterBrowserTest = context.getCurrentXmlTest().getName();
 		String browser = context.getCurrentXmlTest().getParameter("browser");
 
-		List<Driver> list = mapOfBrowsers.get(browser);
+		List<InstanceDriver.Driver> list = mapOfBrowsers.get(browser);
 
 		if (afterBrowserTest.equals(browserTest)) {
 
@@ -85,11 +89,11 @@ public class InitialConfiguration {
 	@AfterSuite
 	public void afterSuite() {
 
-		List<Driver> list = mapOfBrowsers.get(browserSuite);
+		List<InstanceDriver.Driver> list = mapOfBrowsers.get(browserSuite);
 
 		for (int i = 0; i < list.size(); i++) {
 			list.get(i).getDriver().quit();
-
 		}
+		mapOfBrowsers.remove(browserSuite);
 	}
 }

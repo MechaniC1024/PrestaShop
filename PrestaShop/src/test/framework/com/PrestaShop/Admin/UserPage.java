@@ -9,7 +9,6 @@ import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
-import org.testng.Assert;
 
 import static com.PrestaShop.Wait.Wait.*;
 import static com.PrestaShop.Report.Report.*;
@@ -123,95 +122,98 @@ public class UserPage {
 		return new Catalog(driver, moveToParagraph(catalog));
 	}
 
-	private void clickOnParagraphAndVerifyTitle(WebElement element) {
-
+	private void clickOnParagraph(WebElement element) {
 		element.click();
+	}	
+	
+	public String getTitle() {
 
 		String title = driver.getTitle();
-
 		addAttachmentToReport("Заголовок страницы.", title);
-
-		driver.navigate().refresh();
-		String titleRefresh = driver.getTitle();
-
-		Assert.assertEquals(title, titleRefresh);
+		return title;		
 	}
+	
+	public UserPage refreshPage() {
+		
+		driver.navigate().refresh();		
+		return this;		
+	}
+	
+	public UserPage clickOnDashboard() {
 
-	public UserPage clickOnDashboardGetTitleAndRefresh() {
+		clickOnParagraph(dashboard);
+		return this;		
+	}
+	
+	public UserPage clickOnOrders() {
 
-		clickOnParagraphAndVerifyTitle(dashboard);
+		clickOnParagraph(orders);
 		return this;
 	}
 
-	public UserPage clickOnOrdersGetTitleAndRefresh() {
+	public UserPage clickOnCatalog() {
 
-		clickOnParagraphAndVerifyTitle(orders);
+		clickOnParagraph(catalog);
 		return this;
 	}
 
-	public UserPage clickOnCatalogGetTitleAndRefresh() {
+	public UserPage clickOnCustomer() {
 
-		clickOnParagraphAndVerifyTitle(catalog);
+		clickOnParagraph(customer);
 		return this;
 	}
 
-	public UserPage clickOnCustomerGetTitleAndRefresh() {
+	public UserPage clickOnCustomerService() {
 
-		clickOnParagraphAndVerifyTitle(customer);
+		clickOnParagraph(customerService);
 		return this;
 	}
 
-	public UserPage clickOnCustomerServiceGetTitleAndRefresh() {
+	public UserPage clickOnStatistics() {
 
-		clickOnParagraphAndVerifyTitle(customerService);
+		clickOnParagraph(statistics);
 		return this;
 	}
 
-	public UserPage clickOnStatisticsGetTitleAndRefresh() {
+	public UserPage clickOnModules() {
 
-		clickOnParagraphAndVerifyTitle(statistics);
+		clickOnParagraph(modules);
 		return this;
 	}
 
-	public UserPage clickOnModulesGetTitleAndRefresh() {
+	public UserPage clickOnDesign() {
 
-		clickOnParagraphAndVerifyTitle(modules);
+		clickOnParagraph(design);
 		return this;
 	}
 
-	public UserPage clickOnDesignGetTitleAndRefresh() {
+	public UserPage clickOnDelivery() {
 
-		clickOnParagraphAndVerifyTitle(design);
+		clickOnParagraph(delivery);
 		return this;
 	}
 
-	public UserPage clickOnDeliveryGetTitleAndRefresh() {
+	public UserPage clickOnPayment() {
 
-		clickOnParagraphAndVerifyTitle(delivery);
+		clickOnParagraph(payment);
 		return this;
 	}
 
-	public UserPage clickOnPaymentGetTitleAndRefresh() {
+	public UserPage clickOnInternational() {
 
-		clickOnParagraphAndVerifyTitle(payment);
+		clickOnParagraph(international);
 		return this;
 	}
 
-	public UserPage clickOnInternationalGetTitleAndRefresh() {
+	public UserPage clickOnShopParameters() {
 
-		clickOnParagraphAndVerifyTitle(international);
+		clickOnParagraph(shopParameters);
 		return this;
 	}
 
-	public UserPage clickOnShopParametersGetTitleAndRefresh() {
+	public UserPage clickOnAdvancedParameters() {
 
-		clickOnParagraphAndVerifyTitle(shopParameters);
-		return this;
-	}
-
-	public UserPage clickOnAdvancedParametersGetTitleAndRefresh() {
-
-		clickOnParagraphAndVerifyTitle(advancedParameters);
+		clickOnParagraph(advancedParameters);
 		return this;
 	}
 }

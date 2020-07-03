@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [PrestaShop_Chrome]">
-  <parameter name="browser" value="Android"/>
+<suite thread-count="1" parallel="tests" name="Failed suite [PrestaShop_Chrome]" guice-stage="DEVELOPMENT">
+  <parameter name="browser" value="Chrome"/>
   <parameter name="threadCount" value="1"/>
   <listeners>
     <listener class-name="com.PrestaShop.Listeners.TestFailedScreenshotListener"/>
   </listeners>
-  <test thread-count="5" name="Check login and logout.(failed)">
+  <test thread-count="1" parallel="tests" name="Check login and logout.(failed)">
     <classes>
       <class name="com.PrestaShop.test1.LoginAndLogout">
         <methods>
@@ -20,88 +20,4 @@
       </class> <!-- com.PrestaShop.test1.LoginAndLogout -->
     </classes>
   </test> <!-- Check login and logout.(failed) -->
-  <test thread-count="5" name="Check titles.(failed)">
-    <classes>
-      <class name="com.PrestaShop.test1.Titles">
-        <methods>
-          <include name="checkTitleAdvancedParameters"/>
-          <include name="checkTitleModules"/>
-          <include name="checkTitleDelivery"/>
-          <include name="checkTitleDesign"/>
-          <include name="checkTitlePayment"/>
-          <include name="checkTitleStatistics"/>
-          <include name="setUp"/>
-          <include name="beforeTest"/>
-          <include name="afterSuite"/>
-          <include name="checkTitleDashboard"/>
-          <include name="logOut"/>
-          <include name="checkTitleCatalog"/>
-          <include name="checkTitleInternational"/>
-          <include name="checkTitleCustomerService"/>
-          <include name="checkTitleShopParameters"/>
-          <include name="afterTest"/>
-          <include name="signIn"/>
-          <include name="checkTitleCustomer"/>
-          <include name="checkTitleOrder"/>
-        </methods>
-      </class> <!-- com.PrestaShop.test1.Titles -->
-    </classes>
-  </test> <!-- Check titles.(failed) -->
-  <test thread-count="5" name="Check the addition of a new category.(failed)">
-    <classes>
-      <class name="com.PrestaShop.test2.AddNewCategory">
-        <methods>
-          <include name="signIn"/>
-          <include name="categorySection"/>
-          <include name="addNewCategory"/>
-          <include name="afterTest"/>
-          <include name="setUp"/>
-          <include name="beforeTest"/>
-          <include name="checkingNewCategory"/>
-          <include name="logOut"/>
-          <include name="afterSuite"/>
-        </methods>
-      </class> <!-- com.PrestaShop.test2.AddNewCategory -->
-    </classes>
-  </test> <!-- Check the addition of a new category.(failed) -->
-  <test thread-count="5" name="Adding and checking a new product.(failed)">
-    <classes>
-      <class name="com.PrestaShop.test3.CreatingANewProduct">
-        <methods>
-          <include name="signIn"/>
-          <include name="checkNewProduct"/>
-          <include name="productSection"/>
-          <include name="logOut"/>
-          <include name="afterTest"/>
-          <include name="newProduct"/>
-          <include name="productActivation"/>
-          <include name="setUp"/>
-          <include name="beforeTest"/>
-          <include name="afterSuite"/>
-        </methods>
-      </class> <!-- com.PrestaShop.test3.CreatingANewProduct -->
-    </classes>
-  </test> <!-- Adding and checking a new product.(failed) -->
-  <test thread-count="5" name="Ordering.(failed)">
-    <classes>
-      <class name="com.PrestaShop.test4.Ordering">
-        <methods>
-          <include name="inputDeliveryAddressData"/>
-          <include name="paymentMethod"/>
-          <include name="inputCustomerData"/>
-          <include name="setUp"/>
-          <include name="beforeTest"/>
-          <include name="afterSuite"/>
-          <include name="choiceOfRandomGoods"/>
-          <include name="checkingQuantityProduct"/>
-          <include name="checkingPropertiesOrder"/>
-          <include name="afterTest"/>
-          <include name="checkingPropertiesProduct"/>
-          <include name="productProperties"/>
-          <include name="deliveryMethod"/>
-          <include name="addingProductToCart"/>
-        </methods>
-      </class> <!-- com.PrestaShop.test4.Ordering -->
-    </classes>
-  </test> <!-- Ordering.(failed) -->
 </suite> <!-- Failed suite [PrestaShop_Chrome] -->

@@ -6,7 +6,6 @@ import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
-import org.testng.Assert;
 
 public class ConfirmationOfAnOrder{
 	
@@ -37,38 +36,27 @@ public class ConfirmationOfAnOrder{
 		this.driver = driver;
 		PageFactory.initElements(new AjaxElementLocatorFactory(driver, 20), this);
 	}
-	
-	public ConfirmationOfAnOrder checkOrderNameProduct(StringBuilder nameProduct) {
 		
-		Assert.assertEquals(name.getText().substring(0, nameProduct.length()).toUpperCase(), nameProduct.toString().toUpperCase(),
-				"Разное название продукта.");
+	public String getOrderNameProduct() {
 		
-		return this;
+		return name.getText().toUpperCase();
 	}
 	
-	public ConfirmationOfAnOrder checkOrderPriceOrder(StringBuilder priceProduct) {
+	public String getOrderPriceOrder() {
 		
-		Assert.assertEquals(price.getText().substring(0, price.getText().length() - 2).replace(',', '.'), priceProduct.toString(),
-				"Разная цена товара.");
-		
-		return this;
+		return price.getText().substring(0, price.getText().length() - 2).replace(',', '.');
 	}
 	
-	public ConfirmationOfAnOrder checkOrderQuantityProduct(String quantityProduct) {
+	public String getOrderQuantityProduct() {
 		
-		Assert.assertEquals(quantity.getText(), quantityProduct, "Разное количество товара.");
-		
-		return this;
+		return quantity.getText();
 	}
 	
-	public ConfirmationOfAnOrder checkOrderTitle() {
+	public String getOrderTitle() {		
 		
-		Assert.assertEquals(titleOrderConfirmed.getText().substring(1, titleOrderConfirmed.getText().length()),
-				"ВАШ ЗАКАЗ ПОДТВЕРЖДЁН", "Разное сообщение о заказе.");
-		
-		return this;
+		return titleOrderConfirmed.getText().substring(1, titleOrderConfirmed.getText().length());
 	}
-	
+		
 	public AllProduct selectAllProduct() {
 
 		allProducts.click();

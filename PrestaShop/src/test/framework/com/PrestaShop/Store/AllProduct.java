@@ -9,63 +9,59 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 
+import com.PrestaShop.DataResources.GetProduct;
+
 import static com.PrestaShop.Wait.Wait.*;
 
 import java.util.List;
 
-public class AllProduct{
+public class AllProduct {
 
 	private RemoteWebDriver driver;
-	
-	private int randomNumberProduct;
-	
+
+	private int numberProduct;
+
 	@CacheLookup
 	@FindBy(xpath = "//div[@class='products row']//div[@class='product-description']//a")
 	private List<WebElement> allProducts;
-	
+
 	private By next = By.xpath("//a[@rel = 'next']");
-	
+
 	AllProduct(RemoteWebDriver driver) {
-		
+
 		this.driver = driver;
+		numberProduct = GetProduct.getNumberProduct().get(driver.getCapabilities().getBrowserName());
 		PageFactory.initElements(new AjaxElementLocatorFactory(driver, 20), this);
-		randomNumberProduct = (int) (Math.random() * allProducts.size());
 	}
 
 	private WebElement clickOnNext() {
 
 		return waitingForElementToBeClickable(driver, next, 20);
 	}
-	
-	public Product clickOnRandomProduct() {
-		
-		allProducts.get(randomNumberProduct).click();
-		
-		return new Product(driver, randomNumberProduct);
+
+	public Product clickOnProduct() {
+
+		allProducts.get(numberProduct).click();
+		return new Product(driver);
 	}
-	
+
 	private WebElement selectProduct(String nameProduct) {
 
 		By selectProduct = By.linkText(nameProduct);
-		
 		WebElement element = null;
 
 		boolean flag = true;
 
 		while (flag) {
 			try {
-
 				element = waitingForElementToBeClickable(driver, selectProduct, 5);
 				flag = false;
-
 			} catch (TimeoutException e) {
-
 				clickOnNext().click();
-
 			}
 		}
-		return element;
 
+		return element;
 	}
 
 	public Product clickOnProduct(String nameProduct) {
@@ -73,14 +69,8 @@ public class AllProduct{
 		selectProduct(nameProduct).click();
 		return new Product(driver);
 	}
-	
-	public Product clickOnProduct(StringBuilder nameProduct) {
 
-		selectProduct(nameProduct.toString()).click();
-		return new Product(driver);
-	}
-	
-	public Product clickOnRandomProductAgain(int numberProduct) {
+	public Product clickOnRandomProductAgain() {
 
 		allProducts.get(numberProduct).click();
 		return new Product(driver);

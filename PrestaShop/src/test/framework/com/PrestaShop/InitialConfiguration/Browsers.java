@@ -22,7 +22,7 @@ public enum Browsers {
 	CHROME {
         public DesiredCapabilities create(){
         	
-        	WebDriverManager.chromedriver().setup();        	
+        	WebDriverManager.chromedriver().setup();
             return DesiredCapabilities.chrome();
         }
     },

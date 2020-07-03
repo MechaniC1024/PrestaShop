@@ -10,7 +10,6 @@ import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
-import org.testng.Assert;
 
 public class Category{
 	
@@ -48,18 +47,20 @@ public class Category{
 		return new NewCategory(driver);
 	}
 
-	public Category clickOnCloseButtonAlert() {
+	public String getTextButtonAlert() {
 		
 		WebElement parentElement = closeButtonAlertSuccess.findElement(By.xpath("./.."));
 		
-		String text = parentElement.getText();
-		String textCheck = text.substring(1, text.length()).trim();
-		Assert.assertEquals("Создано", textCheck);
-		closeButtonAlertSuccess.click();
-		
-		return this;
+		String text = parentElement.getText();				
+		return text.substring(1, text.length()).trim();
 	}
-
+	
+	public Category clickOnCloseButtonAlert() {
+		
+		closeButtonAlertSuccess.click();		
+		return this;
+	}	
+	
 	public Category setFilterByNameCategory(String nameCategory) {
 		
 		categoryFilterName.sendKeys(nameCategory);		
@@ -72,13 +73,12 @@ public class Category{
 		return this;
 	}
 	
-	public Category containsCategory(String nameCategory) {
+	public List<String> getListCategories() {
 		
 		List<String> listNames = new LinkedList<>(); 
 		for(WebElement element: categoryNames)
 			listNames.add(element.getText());
 		
-		Assert.assertEquals(true, listNames.contains(nameCategory));		
-		return this;
+		return listNames;
 	}
 }

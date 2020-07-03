@@ -1,6 +1,6 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="PrestaShop_Chrome" verbose="1" parallel="tests"
-	thread-count="2">
+	thread-count="1">
 
 	<listeners>
 		<listener
@@ -9,14 +9,14 @@
 	</listeners>
 
 	<parameter name="browser" value="Chrome" />
-	<parameter name="threadCount" value="2" />
+	<parameter name="threadCount" value="1" />
  
 	<test name="Check login and logout.">
 		<classes>
 			<class name="com.PrestaShop.test1.LoginAndLogout" />
 		</classes>
 	</test>
-
+<!-- 
 	<test name="Check titles.">
 		<classes>
 			<class name="com.PrestaShop.test1.Titles" />
@@ -40,5 +40,5 @@
 			<class name="com.PrestaShop.test4.Ordering" />
 		</classes>
 	</test>
-
+ -->
 </suite>

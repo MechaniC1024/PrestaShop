@@ -34,9 +34,9 @@ public class PaymentOfAnOrder{
 		PageFactory.initElements(new AjaxElementLocatorFactory(driver, 20), this);
 	}
 	
-	public PaymentOfAnOrder paymentMethod(int paymentMethod_One_Or_Two) {
+	public PaymentOfAnOrder paymentMethod(int paymentMethodOneOrTwo) {
 
-		switch (paymentMethod_One_Or_Two) {
+		switch (paymentMethodOneOrTwo) {
 		case 1:
 		default: {
 			paymentByCheck.click();
